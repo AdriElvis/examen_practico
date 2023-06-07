@@ -23,10 +23,10 @@ public class Controlador {
     @Autowired
     private IVisitaServicio servicioVisita;
 
-
     @GetMapping
-    public ResponseEntity<List<Autobus>> obtener(Integer id){
-        return new ResponseEntity(servicioVisita.obtenerAutobus(id), HttpStatus.OK);
+    public ResponseEntity<List<Autobus>> obtener(){
+        return new ResponseEntity(servicoAutobus.listar(), HttpStatus.OK);
     }
+
 
 }

@@ -6,12 +6,19 @@ import com.example.ej2_examen.repositorio.IVisitaRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class VisitaServicioImp implements IVisitaServicio{
     @Autowired
     IVisitaRepo repo;
+
+    @Override
+    public List<Visita> listar() {
+        return repo.findAll();
+    }
+
     @Override
     public Visita consulta(Integer id) {
         return repo.findById(id).get();
