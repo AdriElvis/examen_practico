@@ -1,0 +1,12 @@
+<h1>Listado de Autobuses</h1>
+<table>
+    <tr>
+        <th>Matricula</th>
+        <th>Año de fabricación</th>
+    </tr>
+    <tr *ngFor="let autobus of lista">
+        <td>{{autobus.matricula}}</td>
+        <td>{{autobus.a_fabricacion}}</td>
+    </tr>
+</table>
+
